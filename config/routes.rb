@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/index'
   devise_for :users, controllers: {confirmation: 'confirmation', omniauth_callbacks: 'users/omniauth_backs', registations: 'registrations'}#sessions: 'users/sessions'
   resources :users, :only => [:index]
   root 'pages#index'
